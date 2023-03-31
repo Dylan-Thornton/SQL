@@ -1,0 +1,25 @@
+--Create a sports store database
+
+create table store (id integer primary key, name text, price integer, aisle integer, inventory integer);
+
+insert into store values (1, "shoes", 60, 5, 100);
+insert into store values (2, "shirts", 30, 6, 200);
+insert into store values (3, "socks", 10, 4, 200);
+insert into store values (4, "football", 25, 9, 125);
+insert into store values (5, "basketball", 30, 9,125);
+insert into store values (6, "baseball", 5, 9, 100);
+insert into store values (7, "gloves", 20, 10, 50);
+insert into store values (8, "mouthpiece", 12,11,75);
+insert into store values (9, "bat", 120, 13, 50);
+insert into store values (10, "water bottle", 22, 16, 200);
+insert into store values (11, "gatorade", 3,1,500);
+insert into store values (12, "chair", 50, 21, 100);
+insert into store values (13, "sunglasses", 125, 13, 225);
+insert into store values (14, "gum", 1, 22, 1000);
+insert into store values (15, "golf clubs", 1250, 25, 30);
+
+--display the database ordered by price in descending order.
+select * from store order by price;
+
+--display the total amount of inventory in my store database.
+select sum(inventory) from store;
