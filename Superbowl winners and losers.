@@ -66,6 +66,8 @@ INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,Cit
 INSERT INTO superbowls(Date,SB,Winner,Winner_Pts,Loser,Loser_Pts,MVP,Stadium,City,State) VALUES ('Jan 15 1967','I (1)','Green Bay Packers',35,'Kansas City Chiefs',10,'Bart Starr+','Memorial Coliseum','Los Angeles','California');
 
 
+-- Display the winner and loser of superbowl and inserted formula to show the margin of victory by the winner of the superbowl.
+
 select * from superbowls;
 
 /*insert column*/
@@ -81,3 +83,7 @@ select Winner, Loser, (Winner_Pts-Loser_Pts) from superbowls
 UPDATE superbowls SET difference_in_points =Winner_Pts-Loser_Pts;
 
 select * from superbowls;
+
+
+
+
