@@ -1,0 +1,27 @@
+-Created a table for millionaires and inserted data within the values.
+
+create table millionaires (id integer primary key autoincrement, fullname text, age integer, nationality text);
+
+insert into millionaires (fullname,age,nationality) values ("Trey Parker", 53, "USA");
+insert into millionaires (fullname,age,nationality) values ("Tom Cruise", 60, "USA");
+insert into millionaires (fullname,age,nationality) values ("James Cameron", 68, "Canada");
+insert into millionaires (fullname,age,nationality) values ("Simon Cowell", 63, "UK");
+insert into millionaires (fullname,age,nationality) values ("Kanye West", 45, "USA");
+
+-Created second table to put in information of the millionaires net worth and where their net worth derived from primarly.
+
+create table wealth (id integer primary key autoincrement, millionare_id integer, net_worth text, source_wealth text);
+
+insert into wealth (millionare_id, net_worth, source_wealth) values (1,"600 million", "South Park co creator");
+insert into wealth (millionare_id, net_worth, source_wealth) values (2, "600 million", "Actor");
+insert into wealth (millionare_id, net_worth, source_wealth) values (3, "700 million", "director");
+insert into wealth (millionare_id, net_worth, source_wealth) values (4, "600 million", "TV personality");
+insert into wealth (millionare_id, net_worth, source_wealth) values (5, "500 million", "rapper");
+
+-Inserted a join to combine both table to show the millionaires name and networth in one list.
+
+/*Return total net worth for each millionare*/
+select millionaires.fullname,wealth.net_worth
+from millionaires
+join wealth
+ON millionaires.id = wealth.millionare_id;
